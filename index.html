@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>.météo</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="icon" href="img/logo.png" type="image/png">
+</head>
+<body>
+	<h1 class="title" id="dot">.</h1>
+	<h1 class="title">météo</h1>
+	<!-- <h1 class="year">2023</h1> -->
+	<div id="section1">
+		<hr id="first-hr">
+		<h3 class="subtitle">La météo en un clin d'oeil.</h3>
+
+		<div id="search-div">
+			<input id="searchbar" type="text" name="city" placeholder="Entrez le nom d'une ville">
+			<button id="submit">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="-0.5 -0.5 14 14" height="14" width="14">
+					<g class="default-icon" id="magnifying-glass--glass-search-magnifying"><path id="Vector" stroke="#000" stroke-linecap="round" stroke-linejoin="round" d="M5.571428571428571 10.678571428571429c2.8206007142857143 0 5.107142857142858 -2.286542142857143 5.107142857142858 -5.107142857142858S8.392029285714287 0.4642857142857143 5.571428571428571 0.4642857142857143 0.4642857142857143 2.7508278571428573 0.4642857142857143 5.571428571428571s2.286542142857143 5.107142857142858 5.107142857142858 5.107142857142858Z" stroke-width="1.5"></path><path id="Vector_2" stroke="#000" stroke-linecap="round" stroke-linejoin="round" d="M12.535714285714286 12.535714285714286 9.285714285714286 9.285714285714286" stroke-width="1.5"></path></g>
+					<g class="hover-icon" id="brightness-1--bright-adjust-brightness-adjustment-sun-raise-controls"><path id="Vector" stroke="#000" stroke-linecap="round" stroke-linejoin="round" d="M6.2500446428571435 8.033848214285713c0.9852232142857144 0 1.7839107142857145 -0.7986875000000001 1.7839107142857145 -1.7839107142857145S7.2352678571428575 4.466026785714286 6.2500446428571435 4.466026785714286s-1.7839017857142858 0.7986875000000001 -1.7839017857142858 1.7839107142857145 0.7986785714285715 1.7839107142857145 1.7839017857142858 1.7839107142857145Z" stroke-width="1.5"></path><path id="Vector_2" stroke="#000" stroke-linecap="round" stroke-linejoin="round" d="M6.25 0.44642857142857145v0.8928571428571429" stroke-width="1.5"></path><path id="Vector_3" stroke="#000" stroke-linecap="round" stroke-linejoin="round" d="M6.25 11.160714285714286v0.8928571428571429" stroke-width="1.5"></path><path id="Vector_4" stroke="#000" stroke-linecap="round" stroke-linejoin="round" d="M12.053571428571429 6.25h-0.8928571428571429" stroke-width="1.5"></path><path id="Vector_5" stroke="#000" stroke-linecap="round" stroke-linejoin="round" d="M1.3392857142857144 6.25h-0.8928571428571429" stroke-width="1.5"></path><path id="Vector_6" stroke="#000" stroke-linecap="round" stroke-linejoin="round" d="m10.357142857142858 2.1427678571428572 -0.6339285714285714 0.6339285714285714" stroke-width="1.5"></path><path id="Vector_7" stroke="#000" stroke-linecap="round" stroke-linejoin="round" d="m2.7768035714285717 9.723125000000001 -0.6339285714285714 0.6339285714285714" stroke-width="1.5"></path><path id="Vector_8" stroke="#000" stroke-linecap="round" stroke-linejoin="round" d="m10.357142857142858 10.357053571428573 -0.6339285714285714 -0.6339285714285714" stroke-width="1.5"></path><path id="Vector_9" stroke="#000" stroke-linecap="round" stroke-linejoin="round" d="m2.7768035714285717 2.776696428571429 -0.6339285714285714 -0.6339285714285714" stroke-width="1.5"></path></g>
+				</svg>
+			</button>
+		</div>
+
+		<hr id="second-hr">
+	</div>
+	<div id="results">
+		<div id="city-temperature">
+			<h1 id="city-name">Paris</h1>
+			<h1>22 °C</h1>
+		</div>
+		<div id="weather-description">
+			<div id="info">
+				<h2 id="weather">Ciel dégagé.</h2>
+				<h2 id="humidity">Humidité : 50 %</h2>
+				<h2 id="wind">Vent : 10 km/h</h2>
+			</div>
+			<div id="weather-icon">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="-1.2000000000000002 -1.2000000000000002 14 14" height="14" width="14" style="background-color: #ffffff00"><g id="brightness-1--bright-adjust-brightness-adjustment-sun-raise-controls"><path id="Vector" stroke="#000" stroke-linecap="round" stroke-linejoin="round" d="M5.850041785714286 7.519681928571428c0.9221689285714286 0 1.6697404285714288 -0.7475715 1.6697404285714288 -1.6697404285714288S6.772210714285714 4.180201071428572 5.850041785714286 4.180201071428572s-1.6697320714285715 0.7475715 -1.6697320714285715 1.6697404285714288 0.7475631428571429 1.6697404285714288 1.6697320714285715 1.6697404285714288Z" stroke-width="1"></path><path id="Vector_2" stroke="#000" stroke-linecap="round" stroke-linejoin="round" d="M5.8500000000000005 0.41785714285714287v0.8357142857142857" stroke-width="1"></path><path id="Vector_3" stroke="#000" stroke-linecap="round" stroke-linejoin="round" d="M5.8500000000000005 10.446428571428571v0.8357142857142857" stroke-width="1"></path><path id="Vector_4" stroke="#000" stroke-linecap="round" stroke-linejoin="round" d="M11.282142857142858 5.8500000000000005h-0.8357142857142857" stroke-width="1"></path><path id="Vector_5" stroke="#000" stroke-linecap="round" stroke-linejoin="round" d="M1.2535714285714286 5.8500000000000005h-0.8357142857142857" stroke-width="1"></path><path id="Vector_6" stroke="#000" stroke-linecap="round" stroke-linejoin="round" d="m9.694285714285714 2.0056307142857146 -0.5933571428571428 0.5933571428571428" stroke-width="1"></path><path id="Vector_7" stroke="#000" stroke-linecap="round" stroke-linejoin="round" d="m2.599088142857143 9.100845000000001 -0.5933571428571428 0.5933571428571428" stroke-width="1"></path><path id="Vector_8" stroke="#000" stroke-linecap="round" stroke-linejoin="round" d="m9.694285714285714 9.694202142857144 -0.5933571428571428 -0.5933571428571428" stroke-width="1"></path><path id="Vector_9" stroke="#000" stroke-linecap="round" stroke-linejoin="round" d="m2.599088142857143 2.5989878571428573 -0.5933571428571428 -0.5933571428571428" stroke-width="1"></path></g></svg>
+			</div>
+		</div>
+		
+	</div>
+	  
+	<footer>
+		&copy; 2023 Eric Holzer. All Rights Reserved.
+	</footer>
+</body>
+</html>
