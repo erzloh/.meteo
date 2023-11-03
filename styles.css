@@ -1,7 +1,7 @@
 :root {
     --primary-color: #e8701a;
     --secondary-color: #f9f9f9;
-    --tertiary-color: #777;
+    --tertiary-color: #bebebe;
 
 }
 
@@ -51,12 +51,13 @@ body {
 }
 
 footer {
-    position: absolute;
-    bottom: 10px;
+    /* position: absolute;
+    bottom: 10px; */
 	padding: 10px;
 	color: var(--tertiary-color);
 	font-size: 14px;
 	text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 #search-div {
@@ -64,6 +65,7 @@ footer {
 }
 
 #searchbar {
+    /* width: 300px; */
     width: 100%;
     height: 50px;
     border: 2px solid black;
@@ -119,6 +121,10 @@ opacity: 0;
 opacity: 1;
 }
 
+#submit:active {
+    transform: scale(0.5);
+}
+
 #second-hr {
     border: 1px solid black;
     width: 100%;
@@ -134,8 +140,12 @@ opacity: 1;
 #results svg {
     width: 150px;
     height: 150px;
+}
+
+#weather-icon {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 #city-temperature {
@@ -173,3 +183,13 @@ opacity: 1;
 		opacity: 1;
 	}
 }
+
+@media (max-width: 767px) {
+    #city-temperature {
+        display: block;
+    }
+    #results svg {
+        width: 100px;
+        height: 100px;
+    }
+  }
