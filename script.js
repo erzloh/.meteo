@@ -129,11 +129,15 @@ nightModeBtn.addEventListener('click', () => {
 	if (nightMode === false) {
 		document.querySelector('body').style.setProperty('--background-color', 'black');
 		document.querySelector('body').style.setProperty('--text-color', 'white');
+		document.querySelector('#moon-icon').style.setProperty('display', 'none');
+		document.querySelector('#sun-icon').style.setProperty('display', 'block');
 		nightMode = true;
 	}
 	else {
 		document.querySelector('body').style.setProperty('--background-color', 'white');
 		document.querySelector('body').style.setProperty('--text-color', 'black');
+		document.querySelector('#moon-icon').style.setProperty('display', 'block');
+		document.querySelector('#sun-icon').style.setProperty('display', 'none');
 		nightMode = false;
 	}
 });
