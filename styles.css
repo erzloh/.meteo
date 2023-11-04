@@ -2,7 +2,8 @@
     --primary-color: #e8701a;
     --secondary-color: #f9f9f9;
     --tertiary-color: #bebebe;
-
+    --background-color: white;
+    --text-color: black;
 }
 
 @font-face {
@@ -18,19 +19,30 @@ html {
 }
 
 body {
+    background-color: var(--background-color);
+    transition: all 0.8s ease;
     /* background: linear-gradient(135deg, var(--secondary-color) 0%, var(--secondary-color) 50%, var(--primary-color) 50%, var(--primary-color) 100%); */
     /* background: linear-gradient(135deg, var(--secondary-color), var(--primary-color)); */
 
 }
 
+#weather-icon svg path {
+    stroke: var(--text-color);
+}
+
+h1, h2, h3 {
+    color: var(--text-color);
+}
+
 .title {
     font-size: 6rem;
-    color: black;
+    color: var(--text-color);
     margin: 0;
     animation: moveFadeIn 1s ease-in-out;
     padding: 0;
     display: inline-block;
 }
+
 
 #dot {
     /* color: #e8701a; */
@@ -41,12 +53,57 @@ body {
     display: inline-block;
 }
 
+.header-div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.night-btn-div {
+    display: flex;
+    align-items: center;
+    animation: moveFadeIn 2s ease-in-out;
+}
+
+#night-btn {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    width: 50px;
+    height: 50px;
+    border: 2px solid var(--text-color);
+    border-radius: 25px;
+    background-color: var(--text-color);
+    transition: all 0.8s ease;
+    cursor: pointer;
+
+}
+
+#night-btn svg {
+    transform: scale(1.5);
+}
+
+#night-btn svg path {
+    stroke: var(--background-color);
+}
+
+#night-btn:hover {
+    background-color: var(--background-color);
+}
+
+#night-btn:hover svg path {
+    stroke: var(--text-color);
+}
+
+#night-btn:active {
+    transform: scale(0.5);
+}
+
 #section1 {
     animation: fadeIn 1.5s ease-in-out;
 }
 
 #first-hr {
-    border: 2px solid black;
+    border: 2px solid var(--text-color);
     width: 100%;
 }
 
@@ -66,7 +123,7 @@ footer {
 
 #searchbar {
     /* width: 300px; */
-    width: 100%;
+    width: 70%;
     height: 50px;
     border: 2px solid black;
     border-radius: 25px;
@@ -80,17 +137,17 @@ input:focus {
 }
 
 #submit {
-    width: 50px;
+    width: 30%;
     height: 50px;
-    border: 2px solid black;
+    border: 2px solid var(--text-color);
     border-radius: 25px;
     margin-left: 10px;
-    background-color: black;
+    background-color: var(--text-color);
     transition: all 0.8s ease;
-    display: flex;
     cursor: pointer;
-    justify-content: center;
-    align-items: center;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
 }
 
 #submit svg {
@@ -98,15 +155,15 @@ input:focus {
 }
 
 #submit .default-icon path {
-    stroke: white;
+    stroke: var(--background-color);
 }
 
 #submit .hover-icon path {
-    stroke: black;
+    stroke: var(--text-color);
 }
 
 #submit:hover {
-    background-color: white;
+    background-color: var(--background-color);
 }
 
 #submit .hover-icon {
@@ -126,7 +183,7 @@ opacity: 1;
 }
 
 #second-hr {
-    border: 1px solid black;
+    border: 1px solid var(--text-color);
     width: 100%;
     margin-top: 30px;
     margin-bottom: 0px;
@@ -191,6 +248,9 @@ opacity: 1;
     #results svg {
         width: 100px;
         height: 100px;
+    }
+    .title, #dot {
+        font-size: 5rem;
     }
   }
 

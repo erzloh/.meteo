@@ -52,6 +52,13 @@ async function updateWeather(city) {
 	}
 	catch (error) {
 		console.error('catching error:', error);
+		document.querySelector('#city-name').innerHTML = 'Ville inconnue';
+		document.querySelector('#temperature').innerHTML = '- °C';
+		document.querySelector('#weather').innerHTML = '-';
+		document.querySelector('#humidity').innerHTML = 'Humidité : - %';
+		document.querySelector('#wind').innerHTML = 'Vent : - km/h';
+		document.querySelector('#weather-icon').innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="-0.5 -0.5 14 14" height="14" width="14"><g id="synchronize-warning--arrow-fail-notification-sync-warning-failure-synchronize-error"><path id="Vector" stroke="#000" stroke-linecap="round" stroke-linejoin="round" d="m10.214285714285715 8.357142857142858 1.8571428571428572 -0.4642857142857143 0.4642857142857143 1.8571428571428572" stroke-width="1"></path><path id="Vector_2" stroke="#000" stroke-linecap="round" stroke-linejoin="round" d="M12.071428571428571 7.892857142857143c-0.3948285714285715 1.1796385714285715 -1.139357142857143 2.211207142857143 -2.134507142857143 2.957592857142857 -0.9951871428571428 0.7463857142857143 -2.193926428571429 1.1722285714285714 -3.4369307142857144 1.2209785714285715 -1.143897857142857 0.00018571428571428572 -2.2601335714285717 -0.35165 -3.19709 -1.0078714285714285 -0.9369564285714287 -0.6562214285714286 -1.6492264285714286 -1.5848857142857145 -2.0400528571428573 -2.6599857142857144" stroke-width="1"></path><path id="Vector_3" stroke="#000" stroke-linecap="round" stroke-linejoin="round" d="m2.7857142857142856 4.642857142857143 -1.8571428571428572 0.4642857142857143 -0.4642857142857143 -1.8571428571428572" stroke-width="1"></path><path id="Vector_4" stroke="#000" stroke-linecap="round" stroke-linejoin="round" d="M0.9285714285714286 5.107142857142858c0.4156007142857143 -1.1667221428571428 1.165617142857143 -2.185197857142857 2.15644 -2.9283242857142855C4.0758342857142855 1.4357014285714287 5.263579285714286 1.0008607142857142 6.5 0.9285714285714286c1.1494692857142856 0.0032314285714285717 2.2698 0.36192 3.2073785714285714 1.0268885714285714C10.645050000000001 2.6204285714285716 11.354014285714285 3.5591214285714288 11.737142857142858 4.642857142857143" stroke-width="1"></path><path id="Vector_5" stroke="#000" stroke-linecap="round" stroke-linejoin="round" d="M6.5 3.25v3.7142857142857144" stroke-width="1"></path><g id="Group 2626"><path id="Vector_6" stroke="#000" stroke-linecap="round" stroke-linejoin="round" d="M6.5 9.517857142857142c-0.12820785714285715 0 -0.23214285714285715 -0.10390714285714286 -0.23214285714285715 -0.23214285714285715 0 -0.12820785714285715 0.103935 -0.23214285714285715 0.23214285714285715 -0.23214285714285715" stroke-width="1"></path><path id="Vector_7" stroke="#000" stroke-linecap="round" stroke-linejoin="round" d="M6.5 9.517857142857142c0.12820785714285715 0 0.23214285714285715 -0.10390714285714286 0.23214285714285715 -0.23214285714285715 0 -0.12820785714285715 -0.103935 -0.23214285714285715 -0.23214285714285715 -0.23214285714285715" stroke-width="1"></path></g></g></svg>';
+
 	}
 }
 
@@ -113,3 +120,20 @@ async function getCity(latitude, longitude) {
 		console.error('Error', error);
 	}
 }
+
+// Handle night mode button
+let nightMode = false;
+const nightModeBtn = document.querySelector('#night-btn');
+nightModeBtn.addEventListener('click', () => {
+
+	if (nightMode === false) {
+		document.querySelector('body').style.setProperty('--background-color', 'black');
+		document.querySelector('body').style.setProperty('--text-color', 'white');
+		nightMode = true;
+	}
+	else {
+		document.querySelector('body').style.setProperty('--background-color', 'white');
+		document.querySelector('body').style.setProperty('--text-color', 'black');
+		nightMode = false;
+	}
+});
