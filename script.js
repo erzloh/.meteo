@@ -52,7 +52,7 @@ async function updateWeather(city) {
 	}
 	catch (error) {
 		console.error('catching error:', error);
-		document.querySelector('#city-name').innerHTML = 'Ville inconnue';
+		document.querySelector('#city-name').innerHTML = 'Données non disponibles';
 		document.querySelector('#temperature').innerHTML = '- °C';
 		document.querySelector('#weather').innerHTML = '-';
 		document.querySelector('#humidity').innerHTML = 'Humidité : - %';
