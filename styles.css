@@ -51,13 +51,13 @@ body {
 }
 
 footer {
-    /* position: absolute;
-    bottom: 10px; */
-	padding: 10px;
+    position: absolute;
+    bottom: 10px;
+	/* padding: 10px; */
 	color: var(--tertiary-color);
 	font-size: 14px;
-	text-align: center;
     animation: fadeIn 1.5s ease-in-out;
+    margin: 0px;
 }
 
 #search-div {
@@ -191,5 +191,24 @@ opacity: 1;
     #results svg {
         width: 100px;
         height: 100px;
+    }
+  }
+
+  @media (min-width: 1000px) {
+    body {
+        margin-left: 25%;
+        margin-right: 25%;
+    }
+  }
+
+  a {
+    /* text-decoration: none; */
+    color: rgb(141, 141, 141);
+  }
+
+  @media (max-height: 700px) {
+    footer {
+        position: relative;
+        margin-top: 50px;
     }
   }
