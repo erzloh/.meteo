@@ -1,20 +1,25 @@
 :root {
-    --primary-color: #e8701a;
-    --secondary-color: #f9f9f9;
     --tertiary-color: #bebebe;
     --background-color: white;
     --text-color: black;
 }
 
 @font-face {
-    font-family: 'Helvetica';
-    src: url('../Helvetica-Font/Helvetica.ttf') format('ttf');
+    font-family: 'imported-helvetica';
+    src: url('Helvetica-Font/Helvetica.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'imported-helvetica';
+    src: url('Helvetica-Font/Helvetica-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
 html {
-	font-family: Helvetica;
+	font-family: 'imported-helvetica';
     font-size: 16px;
 }
 
@@ -34,8 +39,11 @@ h1, h2, h3 {
     color: var(--text-color);
 }
 
-.title {
-    font-size: 6rem;
+#meteo, #dot {
+    font-size: 8rem;
+}
+
+#meteo {
     color: var(--text-color);
     margin: 0;
     animation: moveFadeIn 1s ease-in-out;
@@ -45,8 +53,6 @@ h1, h2, h3 {
 
 
 #dot {
-    /* color: #e8701a; */
-    font-size: 6rem;
     margin: 0;
     animation: moveFadeIn 2s ease-in-out;
     padding: 0;
@@ -75,7 +81,7 @@ h1, h2, h3 {
     background-color: var(--text-color);
     transition: all 0.8s ease;
     cursor: pointer;
-
+    animation: rotate 4s linear infinite;
 }
 
 #night-btn svg {
@@ -187,7 +193,7 @@ opacity: 1;
 }
 
 #second-hr {
-    border: 1px solid var(--text-color);
+    border: 2px solid var(--text-color);
     width: 100%;
     margin-top: 30px;
     margin-bottom: 0px;
@@ -253,7 +259,7 @@ opacity: 1;
         width: 100px;
         height: 100px;
     }
-    .title, #dot {
+    #meteo, #dot {
         font-size: 5rem;
     }
   }
@@ -274,5 +280,14 @@ opacity: 1;
     footer {
         position: relative;
         margin-top: 50px;
+    }
+  }
+
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
     }
   }
