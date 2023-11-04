@@ -103,7 +103,7 @@ else {
 
 async function getCity(latitude, longitude) {
 	try {
-		const response = await fetch(`http://api.openweathermap.org/geo/1.0/reverse?lat=${latitude}&lon=${longitude}&appid=${apiKey}`);
+		const response = await fetch(`https://api.openweathermap.org/geo/1.0/reverse?lat=${latitude}&lon=${longitude}&appid=${apiKey}`);
 		if (!response.ok) {
 			throw new Error('An error occured when fetching data');
 		}
