@@ -1,7 +1,7 @@
 :root {
     --tertiary-color: #bebebe;
-    --background-color: rgb(249, 249, 249);
-    --text-color: rgb(20, 20, 20);
+    --background-color: rgb(239, 239, 239);
+    --text-color: rgb(40, 40, 40);
 }
 
 @font-face {
@@ -26,6 +26,8 @@ html {
 body {
     background-color: var(--background-color);
     transition: all 0.8s ease;
+    max-width: 100%;
+    overflow-x: hidden;
     /* background: linear-gradient(135deg, var(--secondary-color) 0%, var(--secondary-color) 50%, var(--primary-color) 50%, var(--primary-color) 100%); */
     /* background: linear-gradient(135deg, var(--secondary-color), var(--primary-color)); */
 
